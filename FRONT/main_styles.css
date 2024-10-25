@@ -1,0 +1,125 @@
+:root {
+    --MainColor: #290044;
+    --SecundaryColor: #6eee3b;
+    --ButtonBackground: #1d570c;
+    --HeaderPrimary: #4a4383;
+    --TextPrimary: #effbff;
+    --HeaderText: #fbfffe;
+}
+
+body {
+    background-color: var(--MainColor);
+    color: var(--TextPrimary);
+    margin-left: 0;
+    width: 100%;
+}
+
+.header {
+    color: var(--HeaderText);
+    background-color: var(--HeaderPrimary);
+    height: 75px;
+    max-height: 75px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+.header ::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.headerText {
+    float: left;
+    text-align: center;
+    font-size: 35px;
+    width: 100%;
+    height: 50px;
+    margin-top: 12.5px;
+}
+
+#intro {
+    position: static;
+    background-color: var(--SecundaryColor);
+    color: var(--MainColor);
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    left: 0;
+    top: 0;
+}
+
+p {
+    margin-left: 35px;
+}
+
+.buttons {
+    height: 25vw;
+    padding: 25px;
+    border: black 5px solid;
+    border-radius: 10px;
+    background-color: var(--ButtonBackground);
+    color: var(--MainColor);
+}
+
+button {
+    cursor: pointer;
+    font-size: 4vw;
+    font-weight: 800;
+    padding: 0.4vw;
+    width: 18vw;
+    margin-top: 1vw;
+    background-color: #05acb8;
+    color: #002721;
+    border: black 3px solid;
+    border-radius: 15px;
+    box-shadow: 0 7px #022c3d;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+button:hover {
+    background-color: #002721;
+    color: #05acb8;
+}
+
+button:active {
+    cursor: progress;
+    transform: translateY(4px);
+    box-shadow: 0 3px #010f14;
+}
+
+footer {
+    position: relative;
+    background-color: black;
+    color: var(--TextPrimary);
+    text-align: center;
+    font-size: 1vw;
+}
+
+#login{
+    display:none;
+}
+form{
+    font-size: 2vw;
+}
+input {
+    background-color: #002721;
+    color: #effbff;
+    text-align: left;
+    border: 5px solid var(--SecundaryColor);
+    border-radius: 25px;
+    height: 100%;
+}
+input:valid{
+    background-color: inherit;
+    color: inherit;
+}
+input[type=submit]{
+    border:0 transparent none;
+}
